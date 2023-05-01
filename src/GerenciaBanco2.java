@@ -78,14 +78,12 @@ public class GerenciaBanco2{
             double invLCI = 0;
 
             switch (op2) {
-
                 case 1:
-
                     System.out.println(nome + " Qual valor deseja investir?");
                     invCDB = sc.nextDouble();
                     System.out.println("Por quantos meses?");
                     meses = sc.nextInt();
-                    aplicarBanco ap1 = new aplicarBanco(invCDB, meses, invLCI, meses2);
+                    aplicarBanco ap1 = new aplicarBanco(invCDB, meses);
 
                     System.out.println(nome + " O Rendimento deste investimento em um ano será: " + ap1.cdb());
                     System.out.println("Você investirá: " + invCDB + " Reais por " + meses + " meses, Totalizando " + (ap1.X()) + " Reais Investidos");
@@ -96,17 +94,15 @@ public class GerenciaBanco2{
                     invLCI = sc.nextDouble();
                     System.out.println("Por quantos meses?");
                     meses2 = sc.nextInt();
-                    aplicarBanco ap2 = new aplicarBanco(invCDB, meses, invLCI, meses2);
+                    aplicarBanco ap2 = new aplicarBanco(invLCI, meses2);
 
                     System.out.println(nome + " O Rendimento deste investimento em um ano será: " + ap2.lci());
                     System.out.println("Você investirá: " + invLCI + " Reais por " + meses2 + " meses Totalizando " + (ap2.Y()) + " Investidos");
                     System.out.println("Ao final de um ano você terá acumulado: " + ap2.totalLCI() + " Reais");
                     break;
-
                 case 3:
                     System.out.println("Muito obrigado por utilizar nossos serviços ");
                     break;
-
                 default:
                     System.out.println("Valor inválido");
                     break;
@@ -117,10 +113,7 @@ public class GerenciaBanco2{
             System.out.println(nome + " Escolha a opção:");
             System.out.println("1 para adição, 2 para subtração, 3 para multiplicação, 4 para divisão, 5 para radiciação e 6 para sair");
             cal = sc.nextInt();
-
-
             switch (cal) {
-
                 case 1:
 
                     System.out.println("digite dois numeros separados por enter:");
